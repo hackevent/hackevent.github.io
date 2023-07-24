@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title href="index.html">Bin0x - Meetups Infosec France</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="/assets/binoculars.png">
+    <meta charset="UTF-8">
+    
+</head>
+<body>  
+
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid" style="position: absolute;">
+    <img class="" src="assets/binoculars.png"   height="24"  style="margin: 1%" />
+
+      <a class="navbar-brand" href="#">Bin-0<span style="text-transform: lowercase;">x</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" id="scrollToEvents">View Events</a>
+        </li>
+      </ul>
+    </div>
+    <!-- <a href="https://github.com/dreamkinn">@dreamkinn</a> -->
+  </div>
+</nav>
+<!-- <header> -->
+<div id="scrollToEventsImage" class="landing-page">
+  <div class="centered-content">
+    <h1 >Bienvenue sur Bin-<span id="name-animation"><span style="text-transform: lowercase;">0x</span></span></h1>
+    <br>
+    <figure class="text-end">
+      <blockquote class="blockquote">
+        <p class="mb-0" style="text-align: center;">Moniteur d'événements infosec en France.</p>    
+      </blockquote>
+    </figure>
+    <figcaption class="blockquote-footer">
+      <cite title="Source Title"><span id="total-events">0</span> actuellement référencés</cite>
+    </figcaption>
+  </div>
+<img src="assets/arrow.png" >
+</div>
+
+<!-- Events -->
+<section id="events">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Prochaine Date</th>
+      <th scope="col">Lieu</th>
+      <!-- <th scope="col">Site</th> -->
+      <th scope="col">CTF</th>
+      <th scope="col">Prix (standard)</th>  
+      <th scope="col">Précédente date</th>
+    </tr>
+  </thead>
+  <tbody class="table-events">
+  </tbody>
+</table>
+</section>
+</body>
+</html>
+<!-- Events table -->
+<script>
+  column = '<tr class="table-light"><th scope="row"><a href="SITE_PLACEHOLDER">NAME_PLACEHOLDER</th><td>DATE_PLACEHOLDER</td><td>LIEU_PLACEHOLDER</td><td>CTF_PLACEHOLDER</td><td>PRIX_PLACEHOLDER</td><td>LAST_PLACEHOLDER</td></tr>'
+  // column = '<tr class="table-light"><th scope="row">NAME_PLACEHOLDER</th><td>DATE_PLACEHOLDER</td><td>LIEU_PLACEHOLDER</td><td>SITE_PLACEHOLDER</td><td>CTF_PLACEHOLDER</td><td>LAST_PLACEHOLDER</td></tr>'
+  
+  json = [
+  {
+    name:"SSTIC",
+    date:"-",
+    lieu:"Rennes",
+    site:"https://www.sstic.org/",
+    prix:"395€",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked="" disabled="">',
+    last:"7-9 juin 2023"
+  },
+  {
+    name:"Meetup HTB France",
+    date:"-",
+    lieu:"Discord",
+    site:"https://www.meetup.com/fr-FR/hack-the-box-meetup-france",
+    prix:"Gratuit",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked="" disabled="">',
+    last:"20 juillet 2023"
+  },
+  {
+    name:"UYBHYS",
+    date:"3-4 novembre 2023",
+    lieu:"Brest",
+    site:"https://www.unlockyourbrain.bzh/",
+    prix:"N/A",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" disabled="">',
+    last:"7-9 juin 2023"
+  },
+  {
+    name:"GreHack",
+    date:"17 Novembre 2023",
+    lieu:"Grenoble",
+    site:"https://grehack.fr/",
+    prix:"N/A",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked="" disabled="">',
+    last:"18 novembre 2022"
+  },
+  {
+    name:"THCon",
+    date:"-",
+    lieu:"Toulouse",
+    site:"https://thcon.party/",
+    prix:"100€",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked="" disabled="">',
+    last:"20-21 avril 2023"
+  },
+  {
+    name:"LeHack",
+    date:"-",
+    lieu:"Paris",
+    site:"https://lehack.org/",
+    prix:"56€",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked="" disabled="">',
+    last:"30 juin et 1 juillet 2023"
+  },
+  {
+    name:"BarbHack",
+    date:"26 août 2023",
+    lieu:"Toulon",
+    site:"https://www.barbhack.fr/",
+    prix:"89€",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked="" disabled="">',
+    last:"27 août 2022"
+  },
+  {
+    name:"BreizhCTF",
+    date:"-",
+    lieu:"Rennes",
+    site:"https://www.breizhctf.com/",
+    prix:"Gratuit",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked="" disabled="">',
+    last:"17-18 mars 2023"
+  },
+  {
+    name:"ECW",
+    date:"21-22 novembre 2023",
+    lieu:"Rennes",
+    site:"https://www.european-cyber-week.eu/",
+    prix:"330€",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="true" id="flexCheckChecked" checked="" disabled="">',
+    last:"15-17 novembre 2022"
+  },
+  {
+    name:"Botconf",
+    date:"-",
+    lieu:"Nice",
+    site:"https://www.botconf.eu/",
+    prix:"N/A",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" disabled="">',
+    last:"11-14 avril 2023"
+  },
+  {
+    name:"Pass The Salt",
+    date:"-",
+    lieu:"Lille",
+    site:"https://www.pass-the-salt.org/",
+    prix:"Gratuit",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" disabled="">',
+    last:"3-5 juillet 2023"
+  },
+  {
+    name:"hexacon",
+    date:"13 et 14 octobre 2023",
+    lieu:"Paris",
+    site:"https://www.hexacon.fr/",
+    prix:"900€",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" checked="" disabled="">',
+    last:"13 et 14 octobre 2022"
+  },
+  {
+    name:"Mars@Hack",
+    date:"-",
+    lieu:"Mont-de-Marsan",
+    site:"http://www.montdemarsan-agglo.fr/agglo/jsp/site/Portal.jsp?page_id=434",
+    prix:"Gratuit",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" checked="" disabled="">',
+    last:"29 mars 2023"
+  },
+  {
+    name:"StHack",
+    date:"-",
+    lieu:"Bordeaux",
+    site:"http://sthack.fr/",
+    prix:"N/A",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" checked="" disabled="">',
+    last:"12 mai 2023"
+  },
+  {
+    name:"INCYBER (FIC)",
+    date:"26-28 mars 2024",
+    lieu:"Lille",
+    site:"https://europe.forum-fic.com/",
+    prix:"Gratuit",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" checked="" disabled="">',
+    last:"5-7 avril 2023"
+  },
+  {
+    name:"DefCon Paris",
+    date:"11 septembre 2023",
+    lieu:"Paris",
+    site:"http://defconparis.org/",
+    prix:"Gratuit",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" disabled="">',
+    last:"19 juin 2023"
+  },
+  {
+    name:"SecSea",
+    date:"13-14 octobre 2023",
+    lieu:"La Ciotat",
+    site:"https://secsea.org/",
+    prix:"60€",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" checked="" disabled="">',
+    last:"14-15 octobre 2022"
+  },  
+  {
+    name:"Phown",
+    date:"24-25 novembre 2023",
+    lieu:"Sophia Antipolis",
+    site:"https://ph0wn.org/",
+    prix:"Gratuit",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" checked="" disabled="">',
+    last:"14-15 octobre 2022"
+  },  
+  {
+    name:"PSES",
+    date:"-",
+    lieu:"Choisy-le-Roi",
+    site:"https://passageenseine.fr/",
+    prix:"Gratuit",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" disabled="">',
+    last:"15-17 juin 2023"
+  },  
+  {
+    name:"BiereSecuTLS",
+    date:"Tous les N mois (go Discord)",
+    lieu:"Toulouse",
+    site:"https://twitter.com/BiereSecu/",
+    prix:"Gratuit",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" disabled="">',
+    last:"1 juin 2023"
+  },  
+  {
+    name:"HackInParis",
+    date:"25-29 septembre 2023",
+    lieu:"Paris",
+    site:"https://www.hackinparis.com/",
+    prix:"Gratuit",
+    ctf:'<div class="form-check"><input class="form-check-input" type="checkbox" value="false" id="flexCheckChecked" disabled="">',
+    last:"27 juin au 1er juillet 2022"
+  }, 
+]
+
+  const totalSpan = document.getElementById('total-events')
+  totalSpan.textContent = json.length
+  
+  // Generate events table
+  for (let [k,event] of Object.entries(json).sort((a,b) => a[1].name > b[1].name)) {
+    tmpcol = column
+    tmpcol = tmpcol.replace("NAME_PLACEHOLDER",event.name)
+    tmpcol = tmpcol.replace("DATE_PLACEHOLDER",event.date)
+    tmpcol = tmpcol.replace("LIEU_PLACEHOLDER",event.lieu)
+    tmpcol = tmpcol.replace("SITE_PLACEHOLDER",event.site)
+    tmpcol = tmpcol.replace("PRIX_PLACEHOLDER",event.prix)
+    tmpcol = tmpcol.replace("CTF_PLACEHOLDER",event.ctf)
+    tmpcol = tmpcol.replace("LAST_PLACEHOLDER",event.last)
+    document.getElementsByClassName("table-events")[0].innerHTML += tmpcol
+  }
+  // json.forEach(event => {
+  //   tmpcol = column
+  //   tmpcol = tmpcol.replace("NAME_PLACEHOLDER",event.name)
+  //   tmpcol = tmpcol.replace("DATE_PLACEHOLDER",event.date)
+  //   tmpcol = tmpcol.replace("LIEU_PLACEHOLDER",event.lieu)
+  //   tmpcol = tmpcol.replace("SITE_PLACEHOLDER",event.site)
+  //   tmpcol = tmpcol.replace("CTF_PLACEHOLDER",event.ctf)
+  //   tmpcol = tmpcol.replace("LAST_PLACEHOLDER",event.last)
+  //   document.getElementsByClassName("table-events")[0].innerHTML += tmpcol
+  // })
+  
+</script>
+
+<!-- Scroll to table -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const scrollToEventsButton = document.getElementById("scrollToEvents");
+  const scrollToEventsImage = document.getElementById("scrollToEventsImage");
+  const eventsSection = document.getElementById("events");
+
+  scrollToEventsButton.addEventListener("click", function() {
+    eventsSection.scrollIntoView({ behavior: "smooth" });
+  });
+
+  scrollToEventsImage.addEventListener("click", function() {
+    eventsSection.scrollIntoView({ behavior: "smooth" });
+  });
+});
+</script>
+
+<!-- Cycle site name -->
+<script>
+  nameState = 0
+  function cycleName() {
+    nameState += 1
+    nameState %= 3
+    names = ['<span style="text-transform: lowercase;">0x</span>','H<span style="text-transform: lowercase;">exagon</span>','F<span style="text-transform: lowercase;">rance</span>']
+    const nameSpan = document.getElementById('name-animation')
+    nameSpan.innerHTML = names[nameState]
+  }
+  
+  setInterval(cycleName,2000);
+</script>
+</body>
+</html>
