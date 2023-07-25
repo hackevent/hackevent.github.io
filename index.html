@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title href="index.html">Bin0x - Meetups Infosec France</title>
+  <title href="index.html">HackEvent - Meetups Infosec France</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <link rel="icon" type="image/x-icon" href="/assets/binoculars.png">
@@ -14,7 +14,7 @@
   <div class="container-fluid" style="position: absolute;">
     <img class="" src="assets/binoculars.png"   height="24"  style="margin: 1%" />
 
-      <a class="navbar-brand" href="#">Bin-0<span style="text-transform: lowercase;">x</span></a>
+      <a class="navbar-brand" href="#">HackEvent</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -31,7 +31,7 @@
 <!-- <header> -->
 <div id="scrollToEventsImage" class="landing-page">
   <div class="centered-content">
-    <h1 >Bienvenue sur Bin-<span id="name-animation"><span style="text-transform: lowercase;">0x</span></span></h1>
+    <h1 >Bienvenue sur HackEvent-<span id="name-animation">F<span style="text-transform: lowercase;">rance</span></span></h1>
     <br>
     <figure class="text-end">
       <blockquote class="blockquote">
@@ -318,8 +318,8 @@ document.addEventListener("DOMContentLoaded", function() {
   nameState = 0
   function cycleName() {
     nameState += 1
-    nameState %= 3
-    names = ['<span style="text-transform: lowercase;">0x</span>','H<span style="text-transform: lowercase;">exagon</span>','F<span style="text-transform: lowercase;">rance</span>']
+    nameState %= 2
+    names = ['H<span style="text-transform: lowercase;">exagon</span>','F<span style="text-transform: lowercase;">rance</span>']
     const nameSpan = document.getElementById('name-animation')
     nameSpan.innerHTML = names[nameState]
   }
