@@ -20,5 +20,11 @@ html, body {
 
 .landing-page img {
   max-width: 100%; 
-  
+}
+
+.table {
+  display: table;
+  width: 60%;
+  height: 60%;
+  margin: 0 auto;
 }
