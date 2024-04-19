@@ -1,3 +1,8 @@
+<!-- load jQuery and tablesorter scripts -->
+<script type="text/javascript" src="dependencies/jQuery/js/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="/dependencies/tablesorter/js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="/dependencies/tablesorter/js/parsers/parser-input-select.min.js"></script>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +52,7 @@
 
 <!-- Events -->
 <section id="events">
-<table class="table table-hover">
+<table id="tablesorter" class="table table-hover">
   <thead>
     <tr>
       <th scope="col">Nom</th>
@@ -110,7 +115,7 @@
     site:"https://grehack.fr/",
     prix:"75€",
     ctf:true,
-    last:"17-18 Novembre 2023"
+    last:"17-18 novembre 2023"
   },
   {
     name:"THCon",
@@ -128,7 +133,7 @@
     site:"https://lehack.org/",
     prix:"56€",
     ctf:true,
-    last:"30 juin et 1 juillet 2023"
+    last:"30 juin 2023 / 1 juillet 2023"
   },
   {
     name:"BarbHack",
@@ -182,7 +187,7 @@
     site:"https://www.hexacon.fr/",
     prix:"900€",
     ctf:true,
-    last:"13 et 14 octobre 2023"
+    last:"13-14 octobre 2023"
   },
   {
     name:"Mars@Hack",
@@ -377,6 +382,98 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   
   setInterval(cycleName,2000);
+</script>
+
+<!-- sort table by column -->
+<script>
+  const months = {
+    janvier: '01',
+    février: '02',
+    mars: '03',
+    avril: '04',
+    mai: '05',
+    juin: '06',
+    juillet: '07',
+    août: '08',
+    septembre: '09',
+    octobre: '10',
+    novembre: '11',
+    décembre: '12',
+  }
+
+  $(function() {
+    // parser to sort date columns
+    $.tablesorter.addParser({
+      id: 'datesorter',
+      is: function(s) {
+        return false;
+      },
+      format: function(dateStr) {
+        dateStr = dateStr.split(" / ")[0];
+        dateStr = dateStr.split(" ");
+
+        //// A element
+        // if no date is defined yet, considered as soonest
+        if (dateStr[0] == "-") {
+          date = "00000000";
+        }
+        // if periodical date, considered as soon
+        else if (dateStr.length > 3){
+          date = "00000001";
+        }
+        // for other regular dates
+        else {
+          day = dateStr[0].split("-")[0].length == 1 ? "0"+dateStr[0].split("-")[0] : dateStr[0].split("-")[0] ;
+          month = months[dateStr[1]];
+          year = dateStr[2];
+          date = year+month+day;
+        }
+        return date;
+      },
+      type: 'numeric'
+    });
+    // parser to sort price column
+    $.tablesorter.addParser({
+      id: 'pricesorter',
+      is: function(s) {
+        return false;
+      },
+      format: function(priceStr) {
+        priceStr = priceStr.split("€")[0];
+
+        if (priceStr === "Gratuit") {
+          price = 0;
+        }
+        else if (priceStr === "N/A") {
+          price = 1;
+        }
+        else {
+          price = priceStr;
+        }
+
+        return price;
+      },
+      type: 'numeric'
+    });
+    $("#tablesorter").tablesorter({
+      cssAsc: 'up',
+      cssDesc: 'down',
+      headers : {
+        1: {
+          sorter: 'datesorter'
+        },
+        3: {
+          sorter : 'checkbox'
+        },
+        4: {
+          sorter: 'priceSorter'
+        },
+        5: {
+          sorter: 'datesorter'
+        }
+      }
+    });
+  });
 </script>
 </body>
 </html>
