@@ -203,7 +203,7 @@ function fillTable() {
     site:"http://defconparis.org/",
     prix:"Gratuit",
     ctf:false,
-    last:"12 février 2024"
+    last:"22 avril 2024"
     },
     {
     name:"SecSea",
