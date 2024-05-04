@@ -254,7 +254,7 @@ function fillTable() {
     name:"Biere Secu Lyon",
     date:"-",
     lieu:"Lyon",
-    site:"https://twitter.com/abu_y0ussef",
+    site:"https://twitter.com/BiereSecuLyon",
     prix:"Gratuit",
     ctf:false,
     last:"21 septembre 2023"
