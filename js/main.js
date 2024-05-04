@@ -302,6 +302,15 @@ function fillTable() {
     prix:"20€",
     ctf:true,
     last:"4 avril 2024"
+    },
+    {
+    name:"WineRump",
+    date:"6 septembre 2024",
+    lieu:"Bordeaux",
+    site:"https://rump.wine/",
+    prix:"N/A",
+    ctf:false,
+    last:"-"
     },]
 
     const totalSpan = document.getElementById('total-events');
