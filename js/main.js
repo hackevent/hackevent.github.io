@@ -257,7 +257,7 @@ function fillTable() {
     site:"https://twitter.com/BiereSecuLyon",
     prix:"Gratuit",
     ctf:false,
-    last:"21 septembre 2023"
+    last:"16 avril 2024"
     },
     {
     name:"Hackvens",
