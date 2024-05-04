@@ -99,12 +99,12 @@ function fillTable() {
     },
     {
     name:"THCon",
-    date:"4-5 avril 2024",
+    date:"-",
     lieu:"Toulouse",
     site:"https://thcon.party/",
     prix:"100€",
     ctf:true,
-    last:"20-21 avril 2023"
+    last:"4-5 avril 2024"
     },
     {
     name:"LeHack",
@@ -144,12 +144,12 @@ function fillTable() {
     },
     {
     name:"Botconf",
-    date:"23-26 avril 2024",
+    date:"-",
     lieu:"Nice",
     site:"https://www.botconf.eu/",
     prix:"N/A",
     ctf:false,
-    last:"11-14 avril 2023"
+    last:"23-26 avril 2024"
     },
     {
     name:"Pass The Salt",
