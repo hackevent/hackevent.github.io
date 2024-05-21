@@ -135,12 +135,12 @@ function fillTable() {
     },
     {
     name:"ECW",
-    date:"-",
+    date:"19-21 novembre 2024",
     lieu:"Rennes",
     site:"https://www.european-cyber-week.eu/",
     prix:"330€",
     ctf:true,
-    last:"19-21 novembre 2024"
+    last:"21-23 novembre 2023"
     },
     {
     name:"Botconf",
@@ -311,13 +311,24 @@ function fillTable() {
     prix:"N/A",
     ctf:false,
     last:"-"
-    },{
-name:"CAID",
-date:"19-20 novembre 2024",
-site:"https://caid-conference.eu/",
-prix:"255€",
-ctf:true,
-last:"-"}]
+    },
+    {
+    name:"CAID",
+    date:"19-20 novembre 2024",
+    lieu:"Rennes",
+    site:"https://caid-conference.eu/",
+    prix:"255€",
+    ctf:true,
+    last:"21-23 novembre 2023"},
+    {
+    name:"C&ESAR",
+    date:"20-21 novembre 2024",
+    lieu:"Rennes",
+    site:"https://www.cesar-conference.org/",
+    prix:"255€",
+    ctf:false,
+    last:"21-23 novembre 2023"
+        }]
 
     const totalSpan = document.getElementById('total-events');
     totalSpan.textContent = json.length;
