@@ -311,7 +311,13 @@ function fillTable() {
     prix:"N/A",
     ctf:false,
     last:"-"
-    },]
+    },{
+name:"CAID",
+date:"19-20 novembre 2024",
+site:"https://caid-conference.eu/",
+prix:"255€",
+ctf:true,
+last:"-"}]
 
     const totalSpan = document.getElementById('total-events');
     totalSpan.textContent = json.length;
