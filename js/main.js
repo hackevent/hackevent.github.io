@@ -290,7 +290,8 @@ function fillTable() {
     name:"Cycom",
     date:"-",
     lieu:"Montpellier",
-    site:"https://www.cycomhackingconference.com/",      prix:"50€",
+    site:"https://www.cycomhackingconference.com/",
+    prix:"50€",
     ctf:true,
     last:"12 avril 2024"
     },
@@ -328,7 +329,16 @@ function fillTable() {
     prix:"255€",
     ctf:false,
     last:"21-23 novembre 2023"
-        }]
+        },
+    {
+    name:"HitchHack",
+    date:"-",
+    lieu:"Vannes",
+    site:"https://hack2g2.fr/tag/hitchhack/",
+    prix:"N/A",
+    ctf:false,
+    last:"16 septembre 2023"
+    }]
 
     const totalSpan = document.getElementById('total-events');
     totalSpan.textContent = json.length;
