@@ -271,11 +271,11 @@ function fillTable() {
     {
     name:"Ambrosia",
     date:"-",
-    lieu:"Rennes",
+    lieu:"Bruz",
     site:"https://esnhack.fr/",
     prix:"15€",
     ctf:false,
-    last:"13 janvier 2023"
+    last:"19 janvier 2024"
     },
     {
     name:"ESIEA Secure Edition",
@@ -347,6 +347,15 @@ function fillTable() {
     prix:"N/A",
     ctf:true,
     last:"21 octobre 2023"
+    },
+    {
+    name:"Nocturnes ESN'HACK",
+    date:"-",
+    lieu:"Bruz",
+    site:"https://esnhack.fr/events/",
+    prix:"N/A",
+    ctf:false,
+    last:"-"
     }]
 
     const totalSpan = document.getElementById('total-events');
