@@ -338,6 +338,15 @@ function fillTable() {
     prix:"N/A",
     ctf:true,
     last:"16 septembre 2023"
+    },
+    {
+    name:"SteakOverflow",
+    date:"-",
+    lieu:"Bruz",
+    site:"https://esnhack.fr/events/",
+    prix:"N/A",
+    ctf:true,
+    last:"21 octobre 2023"
     }]
 
     const totalSpan = document.getElementById('total-events');
