@@ -336,7 +336,7 @@ function fillTable() {
     lieu:"Vannes",
     site:"https://hack2g2.fr/tag/hitchhack/",
     prix:"N/A",
-    ctf:false,
+    ctf:true,
     last:"16 septembre 2023"
     }]
 
