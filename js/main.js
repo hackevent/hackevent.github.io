@@ -117,7 +117,7 @@ function fillTable() {
     },
     {
     name:"BarbHack",
-    date:"-",
+    date:"31 août 2024",
     lieu:"Toulon",
     site:"https://www.barbhack.fr/",
     prix:"89€",
