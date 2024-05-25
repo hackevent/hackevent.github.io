@@ -126,12 +126,12 @@ function fillTable() {
     },
     {
     name:"BreizhCTF",
-    date:"17 mai 2024",
+    date:"-",
     lieu:"Rennes",
     site:"https://www.breizhctf.com/",
     prix:"Gratuit",
     ctf:true,
-    last:"17-18 mars 2023"
+    last:"17 mai 2024"
     },
     {
     name:"ECW",
@@ -180,12 +180,12 @@ function fillTable() {
     },
     {
     name:"StHack",
-    date:"24 mai 2024",
+    date:"-",
     lieu:"Bordeaux",
     site:"http://sthack.fr/",
     prix:"3€",
     ctf:true,
-    last:"12 mai 2023"
+    last:"24 mai 2024"
     },
     {
     name:"INCYBER (FIC)",
@@ -279,12 +279,12 @@ function fillTable() {
     },
     {
     name:"ESIEA Secure Edition",
-    date:"25 mai 2024",
+    date:"-",
     lieu:"Paris",
     site:"https://ese.esiea.fr/",
     prix:"10€",
     ctf:false,
-    last:"17 juin 2023"
+    last:"25 mai 2024"
     },
     {
     name:"Cycom",
