@@ -90,7 +90,7 @@ function fillTable() {
     },
     {
     name:"GreHack",
-    date:"-",
+    date:"15-16 novembre 2024",
     lieu:"Grenoble",
     site:"https://grehack.fr/",
     prix:"75€",
@@ -225,7 +225,7 @@ function fillTable() {
     },  
     {
     name:"BiereSecuTLS",
-    date:"-",
+    date:"12 juin 2024",
     lieu:"Toulouse",
     site:"https://twitter.com/BiereSecu/",
     prix:"Gratuit",
