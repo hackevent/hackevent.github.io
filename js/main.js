@@ -63,12 +63,12 @@ function fillTable() {
     json = [
     {
     name:"SSTIC",
-    date:"5-7 juin 2024",
+    date:"-",
     lieu:"Rennes",
     site:"https://www.sstic.org/",
     prix:"355€",
     ctf:true,
-    last:"7-9 juin 2023"
+    last:"5-7 juin 2024"
     },
     {
     name:"Meetup HTB France",
@@ -108,12 +108,12 @@ function fillTable() {
     },
     {
     name:"LeHack",
-    date:"5-6 juillet 2024",
+    date:"-",
     lieu:"Paris",
     site:"https://lehack.org/",
     prix:"56€",
     ctf:true,
-    last:"30 juin 2023 / 1 juillet 2023"
+    last:"5-6 juillet 2024"
     },
     {
     name:"BarbHack",
@@ -153,12 +153,12 @@ function fillTable() {
     },
     {
     name:"Pass The Salt",
-    date:"3-5 juillet 2024",
+    date:"-",
     lieu:"Lille",
     site:"https://2024.pass-the-salt.org/",
     prix:"Gratuit",
     ctf:false,
-    last:"3-5 juillet 2023"
+    last:"3-5 juillet 2024"
     },
     {
     name:"Hexacon",
@@ -189,7 +189,7 @@ function fillTable() {
     },
     {
     name:"INCYBER (FIC)",
-    date:"-",
+    date:"1-3 avril 2025",
     lieu:"Lille",
     site:"https://europe.forum-fic.com/",
     prix:"Gratuit",
@@ -198,16 +198,16 @@ function fillTable() {
     },
     {
     name:"DefCon Paris",
-    date:"-",
+    date:"9 septembre 2024",
     lieu:"Paris",
     site:"http://defconparis.org/",
     prix:"Gratuit",
     ctf:false,
-    last:"22 avril 2024"
+    last:"10 juin 2024"
     },
     {
     name:"SecSea",
-    date:"-",
+    date:"11-12 octobre 2024",
     lieu:"La Ciotat",
     site:"https://secsea.org/",
     prix:"60€",
@@ -225,12 +225,12 @@ function fillTable() {
     },  
     {
     name:"BiereSecuTLS",
-    date:"12 juin 2024",
+    date:"-",
     lieu:"Toulouse",
     site:"https://twitter.com/BiereSecu/",
     prix:"Gratuit",
     ctf:false,
-    last:"13 septembre 2023"
+    last:"12 juin 2024"
     },  
     {
     name:"HackInParis",
@@ -261,8 +261,8 @@ function fillTable() {
     },
     {
     name:"Hackvens",
-    date:"-",
-    lieu:"Lyon",
+    date:"22 novembre 2024",
+    lieu:"Lille",
     site:"https://hackvens.fr/",
     prix:"5€",
     ctf:true,
@@ -355,7 +355,7 @@ function fillTable() {
     site:"https://esnhack.fr/events/",
     prix:"N/A",
     ctf:false,
-    last:"-"
+    last:"27 juin 2024"
     }]
 
     const totalSpan = document.getElementById('total-events');
